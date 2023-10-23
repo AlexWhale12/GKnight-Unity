@@ -91,7 +91,7 @@ private void Awake()
 
     private void Attack()
     {
-        if (isGrounded = isRecharged)
+        if (isGrounded && isRecharged)
         {
             State = States.Idle;
             isAttacking = true;

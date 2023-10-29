@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class PlayerController : Entity
+{
+    public PlayerController controls;
+}
 public class Hero : Entity
 {
     [SerializeField] private float speed;
@@ -50,7 +54,7 @@ private void Awake()
 
         if (Input.GetButton("Horizontal"))
             Run();
-        if (isGrounded = Input.GetButtonDown("Jump"))
+        if (isGrounded && Input.GetButtonDown("Jump"))
             Jump();
         if (Input.GetButtonDown("Fire1"))
             Attack();

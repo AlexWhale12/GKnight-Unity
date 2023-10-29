@@ -2,12 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : Entity
-{
-    public PlayerController controls;
-}
 public class Hero : Entity
 {
+    private PlayerController control;
     [SerializeField] private float speed;
     [SerializeField] private int lives;
     [SerializeField] private float jumpForce;
